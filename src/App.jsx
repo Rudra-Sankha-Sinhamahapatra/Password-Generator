@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useRef} from "react";
 
 function App() {
-  const [length, setLength] = useState(0);
+  const [length, setLength] = useState(6);
   const [numberAllowed, setNumberallowed] = useState(false);
   const [charAllowed, setCharallowed] = useState(false);
   const [password, setPassword] = useState("");
@@ -92,7 +92,7 @@ function App() {
               defaultChecked={charAllowed}
               id="numberInput"
               onChange={() => {
-                setNumberallowed((prev) => !prev);
+                setCharallowed((prev) => !prev);
               }}
             />
             <label htmlFor="numberInput">Characters</label>
